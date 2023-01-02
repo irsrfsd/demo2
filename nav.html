@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+        }
+       /*nav bar*/ 
+        nav{
+            background-color: antiquewhite;
+            display: flex;
+            width: 100%;
+           
+            justify-content: space-between;
+        }
+        img{
+            width:150px;
+            height:60px;
+        }
+        .right{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+
+        }
+        .rt{
+            display: none;
+            position: relative;
+            margin: 20px;
+        }
+        .side{
+            display: none;
+            flex-direction: column;
+            width:70px;
+            position:absolute;
+            top:20px;
+            right:10px;
+            z-index: 10;
+            background-color: blueviolet;
+        }
+        @media (max-width:700px){
+            .right{
+                display: none;
+            }
+            .rt{
+                display: inline-flex;
+            }
+            .rt:hover .side{
+                display: flex;
+
+            }
+           
+        }
+        .right div a{
+            padding: 0px 15px;
+        }
+
+       
+        a:link{
+            text-decoration: none;
+            color:cyan;
+        }
+        a:visited{
+            text-decoration: none;
+            color: brown;
+        }
+        a:hover{
+            color:chocolate;
+            text-decoration: underline wavy royalblue;
+        }
+        a:active{
+            background-color: cadetblue;
+        }
+        .right:last-child{
+            padding-right: 40px;
+        }
+        .bg{
+            background:linear-gradient(rgba(190,160,120,0.9),rgba(190,120,240,0.8));
+            width: 100%;
+            height: 100vh;
+        }
+        .submenu{
+            display: none;
+            width:100px;
+            position:absolute;
+            left:0px;
+            background-color: antiquewhite;
+        }
+        .cur{
+            position: relative;
+        }
+        .cur:hover .submenu{
+            display: block;
+
+        }
+        .submenu div{
+            padding: 8px 3px ;
+        }
+        .dar{
+            color: brown;
+            float: right;
+        }
+        .ssmenu{
+            display: none;
+            width: 100px;
+            position:absolute;
+            left:100px;
+            background-color: antiquewhite;
+        }
+        .fs{
+            position: relative;
+        }
+        .fs:hover .ssmenu{
+            display: block;
+        }
+
+/* sidemenu*/
+.body{
+    width:100%;
+    display: flex;
+
+}
+.sidemenu{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.maincnt{
+    flex-basis: 80%;
+}
+button{
+    background: transparent;
+    border: 2px groove gray;
+}
+.htmlsm{
+    display: none;
+    flex-direction: column;
+    margin-left: 15px;
+    
+  }
+.htmlcnt:hover .htmlsm{
+   display: flex;
+   
+}
+.htmlcnt{
+    display: flex;
+    flex-direction: column;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <div class="bg">
+    <nav>
+        <div class="left">
+            <img src="logo.jpg"/>
+
+        </div>
+        <div class="rt">
+            <i class="fa-solid fa-bars"></i>
+            <div class="side">
+
+                <div class="cur"><a href="#">Courses</a><i class="dar fa-solid fa-caret-down"></i>
+                    <div class="submenu">
+                        <div class="fs"><a href="#">FSD</a><i class="dar fa-solid fa-caret-right"></i>
+                        <div class="ssmenu">
+                            <div><a href="fsd.html">MERN</a></div>
+                        <div><a href="#">MEAN</a></div>
+                        <div><a href="#">JAVA</a></div>
+        
+        
+                        </div>
+                        
+                        </div>
+                        <div><a href="#">Python</a></div>
+                        <div><a href="#">ES</a></div>
+                        <div><a href="#">AI</a></div>
+        
+                    </div>
+                    </div>
+                    <div><a href="#">Aboutus</a></div>
+                    <div><a href="#">Login</a></div>
+                    <div><a href="#">Rigister</a></div>
+                    <div><a href="#">Contactus</a></div>
+
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="cur"><a href="#">Courses</a><i class="dar fa-solid fa-caret-down"></i>
+            <div class="submenu">
+                <div class="fs"><a href="#">FSD</a><i class="dar fa-solid fa-caret-right"></i>
+                <div class="ssmenu">
+                    <div><a href="fsd.html">MERN</a></div>
+                <div><a href="#">MEAN</a></div>
+                <div><a href="#">JAVA</a></div>
+
+
+                </div>
+                
+                </div>
+                <div><a href="#">Python</a></div>
+                <div><a href="#">ES</a></div>
+                <div><a href="#">AI</a></div>
+
+            </div>
+            </div>
+            <div><a href="#">Aboutus</a></div>
+            <div><a href="#">Login</a></div>
+            <div><a href="#">Rigister</a></div>
+            <div><a href="#">Contactus</a></div>
+        </div>
+    </nav>
+    <div class="body">
+        <div class="sidemenu">
+            <section class="htmlcnt">
+            <button class="htm"><a href="">+HTML</a></button>
+            <div class="htmlsm">
+                <button><a href="">Headings</a></button>
+                <button><a href="">fonts</a></button>
+                <button><a href="">p tag</a></button>
+                <button><a href="">div tag</a></button>
+
+            </div>
+        </section>
+            <button><a href="">CSS</a></button>
+            <button><a href="">JS</a></button>
+            <button><a href="">ReactJS</a></button>
+            <button><a href="">NodeJS</a></button>
+           
+
+        </div>
+        <div class="maincnt"></div>
+</div>
+
+
+</div>
+    
+</body>
+</html>
